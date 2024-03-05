@@ -7,12 +7,21 @@ import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 
 import { StyleClassModule } from 'primeng/styleclass';
+import { LayoutComponent } from './layout/layout.component';
+import { CoreModule } from './core/core.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const primengModules = [ButtonModule, RippleModule, StyleClassModule];
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, [...primengModules]],
+  declarations: [AppComponent, LayoutComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    [...primengModules],
+    CoreModule,
+    FontAwesomeModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
