@@ -14,30 +14,24 @@ const routes: Routes = [
       },
       {
         path: 'home',
-        title: 'Home',
+        title: 'Inicio',
         loadChildren: () =>
           import('./pages/home/home.module').then((m) => m.HomeModule),
       },
       {
-        path: 'login',
+        path: 'admission',
+        title: 'Ingresos',
         loadChildren: () =>
-          import('./pages/login/login.module').then((m) => m.LoginModule),
+          import('./pages/admission/admission.module').then(
+            (m) => m.AdmissionModule
+          ),
       },
     ],
   },
-
-  // {
-  //   path: '',
-  //   pathMatch: 'full',
-  //   title: 'Home',
-  //   loadChildren: () =>
-  //     import('./pages/home/home.module').then((m) => m.HomeModule),
-  // },
-  // {
-  //   path: 'login',
-  //   loadChildren: () =>
-  //     import('./pages/login/login.module').then((m) => m.LoginModule),
-  // },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+  },
 ];
 
 @NgModule({

@@ -11,6 +11,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { CoreModule } from './core/core.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 const primengModules = [ButtonModule, RippleModule, StyleClassModule];
 
 @NgModule({
@@ -21,6 +23,7 @@ const primengModules = [ButtonModule, RippleModule, StyleClassModule];
     [...primengModules],
     CoreModule,
     FontAwesomeModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
