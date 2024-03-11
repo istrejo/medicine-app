@@ -1,4 +1,8 @@
 <div class="min-h-screen w-full flex relative lg:static surface-ground">
   <app-sidebar />
-  <router-outlet />
+  <div class="min-h-screen max-w-[100%] flex flex-column relative flex-auto">
+    <app-header />
+
+    <router-outlet />
+  </div>
 </div>

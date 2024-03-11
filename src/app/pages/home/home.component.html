@@ -1,220 +1,124 @@
-<!-- DEMO -->
-
-<div class="min-h-screen min-w-[100%] flex flex-column relative flex-auto">
-  <div
-    class="flex justify-content-between w-[100%] lg:w-[100% - 200px] align-items-center px-5 surface-0 border-bottom-1 surface-border relative lg:static"
-    style="height: 60px"
-  >
-    <div class="flex">
-      <a
-        pRipple
-        class="cursor-pointer block lg:hidden text-700 mr-3"
-        pStyleClass="#app-sidebar"
-        enterClass="hidden"
-        enterActiveClass="fadeinleft"
-        leaveToClass="hidden"
-        leaveActiveClass="fadeoutleft"
-        [hideOnOutsideClick]="true"
-      >
-        <i class="pi pi-bars text-4xl"></i>
-      </a>
-      <span class="p-input-icon-left">
-        <i class="pi pi-search"></i>
-        <input
-          type="text"
-          pInputText
-          class="border-none w-10rem sm:w-20rem"
-          placeholder="Search"
-        />
-      </span>
-    </div>
-    <a
-      pRipple
-      class="cursor-pointer block lg:hidden text-700"
-      pStyleClass="@next"
-      enterClass="hidden"
-      enterActiveClass="fadein"
-      leaveToClass="hidden"
-      leaveActiveClass="fadeout"
-      [hideOnOutsideClick]="true"
-    >
-      <i class="pi pi-ellipsis-v text-2xl"></i>
-    </a>
-    <ul
-      class="list-none p-0 m-0 hidden lg:flex lg:align-items-center select-none lg:flex-row surface-section border-1 lg:border-none surface-border right-0 top-100 z-1 shadow-2 lg:shadow-none absolute lg:static"
-    >
-      <li>
-        <a
-          pRipple
-          class="flex p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-duration-150 transition-colors"
-        >
-          <i class="pi pi-inbox text-base lg:text-2xl mr-2 lg:mr-0"></i>
-          <span class="block lg:hidden font-medium">Inbox</span>
-        </a>
-      </li>
-      <li>
-        <a
-          pRipple
-          class="flex p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-duration-150 transition-colors"
-        >
-          <i
-            class="pi pi-bell text-base lg:text-2xl mr-2 lg:mr-0"
-            pBadge
-            severity="danger"
-          ></i>
-          <span class="block lg:hidden font-medium">Notifications</span>
-        </a>
-      </li>
-      <li class="border-top-1 surface-border lg:border-top-none">
-        <a
-          pRipple
-          class="flex p-3 lg:px-3 lg:py-2 align-items-center hover:surface-100 font-medium border-round cursor-pointer transition-duration-150 transition-colors"
-        >
-          <img
-            src="assets/images/blocks/avatars/circle/avatar-f-1.png"
-            class="mr-3 lg:mr-0"
-            style="width: 32px; height: 32px"
-          />
-          <div class="block lg:hidden">
-            <div class="text-900 font-medium">Josephine Lillard</div>
-            <span class="text-600 font-medium text-sm"
-              >Marketing Specialist</span
+<div class="flex w-full flex-column flex-auto">
+  <div class="p-5">
+    <div class="grid">
+      <div class="col-12 lg:col-6 xl:col-3">
+        <div class="surface-card shadow-2 p-3 border-1 border-50 border-round">
+          <div class="flex justify-content-between mb-3">
+            <div>
+              <span class="block text-500 font-medium mb-3"
+                >Total al Corte</span
+              >
+              <div class="text-900 font-medium text-xl">₡ 152</div>
+            </div>
+            <div
+              class="flex align-items-center justify-content-center bg-blue-100 border-round"
+              style="width: 2.5rem; height: 2.5rem"
             >
+              <i class="pi pi-money-bill text-blue-500 text-xl"></i>
+            </div>
           </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="flex w-full flex-column flex-auto">
-    <div class="p-5">
-      <div class="grid">
-        <div class="col-12 lg:col-6 xl:col-3">
-          <div
-            class="surface-card shadow-2 p-3 border-1 border-50 border-round"
-          >
-            <div class="flex justify-content-between mb-3">
-              <div>
-                <span class="block text-500 font-medium mb-3"
-                  >Total al Corte</span
-                >
-                <div class="text-900 font-medium text-xl">₡ 152</div>
-              </div>
-              <div
-                class="flex align-items-center justify-content-center bg-blue-100 border-round"
-                style="width: 2.5rem; height: 2.5rem"
+          <span class="text-green-500 font-medium">24 new </span>
+          <span class="text-500">since last visit</span>
+        </div>
+      </div>
+      <div class="col-12 lg:col-6 xl:col-3">
+        <div class="surface-card shadow-2 p-3 border-1 border-50 border-round">
+          <div class="flex justify-content-between mb-3">
+            <div>
+              <span class="block text-500 font-medium mb-3"
+                >Total Operaciones</span
               >
-                <i class="pi pi-money-bill text-blue-500 text-xl"></i>
-              </div>
+              <div class="text-900 font-medium text-xl">16</div>
             </div>
-            <span class="text-green-500 font-medium">24 new </span>
-            <span class="text-500">since last visit</span>
+            <div
+              class="flex align-items-center justify-content-center bg-orange-100 border-round"
+              style="width: 2.5rem; height: 2.5rem"
+            >
+              <i class="pi pi-check text-orange-500 text-xl"></i>
+            </div>
           </div>
+          <span class="text-green-500 font-medium">%52+ </span>
+          <span class="text-500">since last week</span>
         </div>
-        <div class="col-12 lg:col-6 xl:col-3">
-          <div
-            class="surface-card shadow-2 p-3 border-1 border-50 border-round"
-          >
-            <div class="flex justify-content-between mb-3">
-              <div>
-                <span class="block text-500 font-medium mb-3"
-                  >Total Operaciones</span
-                >
-                <div class="text-900 font-medium text-xl">16</div>
-              </div>
-              <div
-                class="flex align-items-center justify-content-center bg-orange-100 border-round"
-                style="width: 2.5rem; height: 2.5rem"
+      </div>
+      <div class="col-12 lg:col-6 xl:col-3">
+        <div class="surface-card shadow-2 p-3 border-1 border-50 border-round">
+          <div class="flex justify-content-between mb-3">
+            <div>
+              <span class="block text-500 font-medium mb-3"
+                >Total Asistencias</span
               >
-                <i class="pi pi-check text-orange-500 text-xl"></i>
-              </div>
+              <div class="text-900 font-medium text-xl">6</div>
             </div>
-            <span class="text-green-500 font-medium">%52+ </span>
-            <span class="text-500">since last week</span>
+            <div
+              class="flex align-items-center justify-content-center bg-cyan-100 border-round"
+              style="width: 2.5rem; height: 2.5rem"
+            >
+              <i class="pi pi-users text-cyan-500 text-xl"></i>
+            </div>
           </div>
+          <span class="text-green-500 font-medium">520 </span>
+          <span class="text-500">newly registered</span>
         </div>
-        <div class="col-12 lg:col-6 xl:col-3">
-          <div
-            class="surface-card shadow-2 p-3 border-1 border-50 border-round"
-          >
-            <div class="flex justify-content-between mb-3">
-              <div>
-                <span class="block text-500 font-medium mb-3"
-                  >Total Asistencias</span
-                >
-                <div class="text-900 font-medium text-xl">6</div>
-              </div>
-              <div
-                class="flex align-items-center justify-content-center bg-cyan-100 border-round"
-                style="width: 2.5rem; height: 2.5rem"
+      </div>
+      <div class="col-12 lg:col-6 xl:col-3">
+        <div class="surface-card shadow-2 p-3 border-1 border-50 border-round">
+          <div class="flex justify-content-between mb-3">
+            <div>
+              <span class="block text-500 font-medium mb-3"
+                >Total Pacientes</span
               >
-                <i class="pi pi-users text-cyan-500 text-xl"></i>
-              </div>
+              <div class="text-900 font-medium text-xl">17</div>
             </div>
-            <span class="text-green-500 font-medium">520 </span>
-            <span class="text-500">newly registered</span>
-          </div>
-        </div>
-        <div class="col-12 lg:col-6 xl:col-3">
-          <div
-            class="surface-card shadow-2 p-3 border-1 border-50 border-round"
-          >
-            <div class="flex justify-content-between mb-3">
-              <div>
-                <span class="block text-500 font-medium mb-3"
-                  >Total Pacientes</span
-                >
-                <div class="text-900 font-medium text-xl">17</div>
-              </div>
-              <div
-                class="flex align-items-center justify-content-center bg-purple-100 border-round"
-                style="width: 2.5rem; height: 2.5rem"
-              >
-                <i class="pi pi-user-plus text-purple-500 text-xl"></i>
-              </div>
-            </div>
-            <span class="text-green-500 font-medium">85 </span>
-            <span class="text-500">responded</span>
-          </div>
-        </div>
-        <div class="col-12 xl:col-6">
-          <div class="surface-card shadow-2 border-round p-4">
-            <div class="flex align-items-center justify-content-between mb-3">
-              <div class="text-900 font-medium text-xl">
-                Grafico de Facturación
-              </div>
-              <div>
-                <button
-                  pButton
-                  pRipple
-                  icon="pi pi-cog"
-                  class="p-button-text p-button-plain p-button-rounded"
-                  (click)="menu3.toggle($event)"
-                ></button>
-                <p-menu #menu3 [popup]="true" [model]="items"></p-menu>
-              </div>
-            </div>
-            <div class="card">
-              <p-chart
-                class="facture-chart"
-                type="line"
-                [data]="data"
-                [options]="options"
-              ></p-chart>
+            <div
+              class="flex align-items-center justify-content-center bg-purple-100 border-round"
+              style="width: 2.5rem; height: 2.5rem"
+            >
+              <i class="pi pi-user-plus text-purple-500 text-xl"></i>
             </div>
           </div>
+          <span class="text-green-500 font-medium">85 </span>
+          <span class="text-500">responded</span>
         </div>
-
-        <div class="col-12 xl:col-6 flex items-center justify-center">
-          <div class="surface-card shadow-2 border-round p-4">
-            <div class="flex align-items-center justify-content-between mb-3">
-              <div class="text-900 font-medium text-xl">Balance</div>
+      </div>
+      <div class="col-12 xl:col-6">
+        <div class="surface-card shadow-2 border-round p-4">
+          <div class="flex align-items-center justify-content-between mb-3">
+            <div class="text-900 font-medium text-xl">
+              Grafico de Facturación
             </div>
+            <div>
+              <button
+                pButton
+                pRipple
+                icon="pi pi-cog"
+                class="p-button-text p-button-plain p-button-rounded"
+                (click)="menu3.toggle($event)"
+              ></button>
+              <p-menu #menu3 [popup]="true" [model]="items"></p-menu>
+            </div>
+          </div>
+          <div class="card">
             <p-chart
-              type="doughnut"
-              [data]="data2"
-              [options]="options2"
+              class="facture-chart"
+              type="line"
+              [data]="data"
+              [options]="options"
             ></p-chart>
           </div>
+        </div>
+      </div>
+
+      <div class="col-12 xl:col-6 flex items-center justify-center">
+        <div class="surface-card shadow-2 border-round p-4">
+          <div class="flex align-items-center justify-content-between mb-3">
+            <div class="text-900 font-medium text-xl">Balance</div>
+          </div>
+          <p-chart
+            type="doughnut"
+            [data]="data2"
+            [options]="options2"
+          ></p-chart>
         </div>
       </div>
     </div>
