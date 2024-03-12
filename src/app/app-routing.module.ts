@@ -26,6 +26,12 @@ const routes: Routes = [
             (m) => m.AdmissionModule
           ),
       },
+      {
+        path: 'patients',
+        title: 'Pacientes',
+        loadChildren: () =>
+          import('./patients/patients.module').then((m) => m.PatientsModule),
+      },
     ],
   },
   {
