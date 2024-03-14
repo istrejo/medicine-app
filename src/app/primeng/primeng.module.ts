@@ -12,6 +12,8 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { CalendarModule } from 'primeng/calendar';
+import { TableModule } from 'primeng/table';
+import { CardModule } from 'primeng/card';
 
 const primengModules = [
   MenuModule,
@@ -26,6 +28,8 @@ const primengModules = [
   InputSwitchModule,
   InputTextareaModule,
   CalendarModule,
+  TableModule,
+  CardModule,
 ];
 
 @NgModule({
