@@ -14,6 +14,9 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { CalendarModule } from 'primeng/calendar';
 import { TableModule } from 'primeng/table';
 import { CardModule } from 'primeng/card';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { TagModule } from 'primeng/tag';
+import { SliderModule } from 'primeng/slider';
 
 const primengModules = [
   MenuModule,
@@ -30,6 +33,9 @@ const primengModules = [
   CalendarModule,
   TableModule,
   CardModule,
+  MultiSelectModule,
+  TagModule,
+  SliderModule,
 ];
 
 @NgModule({

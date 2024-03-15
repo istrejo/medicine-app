@@ -12,6 +12,7 @@ import { CoreModule } from './core/core.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 const primengModules = [ButtonModule, RippleModule, StyleClassModule];
 
@@ -24,6 +25,7 @@ const primengModules = [ButtonModule, RippleModule, StyleClassModule];
     CoreModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

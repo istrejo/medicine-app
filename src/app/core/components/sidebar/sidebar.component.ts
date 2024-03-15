@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { SidebarOption } from '../../interfaces/sidebar.interface';
 
 @Component({
@@ -56,7 +56,7 @@ export class SidebarComponent {
       sub_options: [
         {
           path: 'doctor-list',
-          title: 'Pacientes',
+          title: 'Lista de medicos',
           icon: 'mr-2 pi pi-users',
         },
         {
