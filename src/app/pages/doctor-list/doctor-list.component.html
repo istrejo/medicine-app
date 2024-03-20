@@ -3,33 +3,67 @@
 
   <div class="card p rounded-sm shadow-md">
     <p-table
-      class=""
+      #dt1
       [value]="doctors"
       [paginator]="true"
       [rows]="5"
       [tableStyle]="{ 'max-width': '100%' }"
+      [globalFilterFields]="['name', 'speciality', 'id']"
     >
+      <ng-template pTemplate="caption">
+        <form
+          class="flex justify-center md:justify-start flex-wrap gap-1 align-items-center"
+          [formGroup]="form"
+        >
+          <!-- <span class="flex flex-column gap-2 max-w-[300px]">
+            <input
+              pInputText
+              formControlName="search"
+              type="text"
+              (input)="dt1.filterGlobal(form.get('search')?.value, 'contains')"
+              placeholder="Paciente, Fecha o Sucursal"
+            />
+          </span> -->
+          <div class="col-12 md:col-4 max-w-[300px]">
+            <span class="p-input-icon-left">
+              <i class="pi pi-search"></i>
+              <input
+                pInputText
+                formControlName="search"
+                type="text"
+                (input)="
+                  dt1.filterGlobal(form.get('search')?.value, 'contains')
+                "
+                placeholder="Nombre, Especialidad o Identificación"
+              />
+            </span>
+          </div>
+          <button
+            pButton
+            label="Limpiar"
+            class="ml-2 p-button-outlined"
+            icon="pi pi-undo"
+            (click)="clear(dt1)"
+          ></button>
+        </form>
+      </ng-template>
       <ng-template pTemplate="header">
         <tr>
-          <th>Paciente</th>
-          <th>Fecha</th>
-          <th>Expediente</th>
-          <th>Telefono</th>
-          <th>Sucursal</th>
-          <th>Información</th>
+          <th>Nombre</th>
+          <th>Especialidad</th>
+          <th>Identificación</th>
+          <th>Teléfono</th>
+          <th>Correo</th>
           <th>Acciones</th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-patient>
         <tr>
           <td>{{ patient.name }}</td>
-          <td>{{ patient.orderDate }}</td>
-          <td>{{ patient.medicalRecord }}</td>
+          <td>{{ patient.speciality }}</td>
+          <td>{{ patient.id }}</td>
           <td>{{ patient.phoneNumber }}</td>
-          <td>{{ patient.branch }}</td>
-          <td>
-            <a class="underline cursor-pointer"> Detalles </a>
-          </td>
+          <td>{{ patient.email }}</td>
           <td>
             <p-button icon="pi pi-wrench" [rounded]="true"></p-button>
           </td>
