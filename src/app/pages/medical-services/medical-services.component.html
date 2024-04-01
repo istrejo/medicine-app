@@ -102,7 +102,11 @@
           <td>{{ commission.type }}</td>
           <td>{{ commission.priceBase | currency : "CRC" : "symbol" }}</td>
           <td>
-            <p-button icon="pi pi-wrench" [rounded]="true"></p-button>
+            <p-button
+              icon="pi pi-wrench"
+              size="small"
+              [rounded]="true"
+            ></p-button>
           </td>
         </tr>
       </ng-template>

@@ -70,8 +70,8 @@ export class SidebarComponent {
           icon: 'mr-2 pi pi-heart-fill',
         },
         {
-          path: 'surgeries',
-          title: 'Tipos de Operaciones',
+          path: 'appointments',
+          title: 'Tipos de Consultas',
           icon: 'mr-2 pi pi-home',
         },
       ],

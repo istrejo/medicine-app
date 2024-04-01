@@ -56,6 +56,13 @@ const routes: Routes = [
             (m) => m.SurgeriesModule
           ),
       },
+      {
+        path: 'appointments',
+        loadChildren: () =>
+          import('./pages/appointments/appointments.module').then(
+            (m) => m.AppointmentsModule
+          ),
+      },
     ],
   },
   {
