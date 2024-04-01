@@ -49,6 +49,13 @@ const routes: Routes = [
             (m) => m.MedicalServicesModule
           ),
       },
+      {
+        path: 'surgeries',
+        loadChildren: () =>
+          import('./pages/surgeries/surgeries.module').then(
+            (m) => m.SurgeriesModule
+          ),
+      },
     ],
   },
   {

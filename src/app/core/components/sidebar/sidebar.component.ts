@@ -65,12 +65,12 @@ export class SidebarComponent {
           icon: 'mr-2 pi pi-server',
         },
         {
-          path: 'type-surgeries',
+          path: 'surgeries',
           title: 'Tipos de Operaciones',
           icon: 'mr-2 pi pi-heart-fill',
         },
         {
-          path: 'type-surgeries',
+          path: 'surgeries',
           title: 'Tipos de Operaciones',
           icon: 'mr-2 pi pi-home',
         },

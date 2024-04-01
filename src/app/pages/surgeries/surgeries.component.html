@@ -1,0 +1,84 @@
+<div class="w-full mx-auto flex flex-column px-4 py-5 lg:px-4 surface-ground">
+  <h3 class="text-900 font-medium text-xl mb-3">Lista de Operaciones</h3>
+
+  <div class="card p rounded-sm shadow-md">
+    <p-table
+      #dt1
+      [value]="surgeries"
+      [paginator]="true"
+      [rows]="5"
+      [tableStyle]="{ 'max-width': '100%' }"
+      [globalFilterFields]="['title']"
+    >
+      <ng-template pTemplate="caption">
+        <form
+          class="flex justify-center md:justify-start flex-wrap gap-2 align-items-center"
+          [formGroup]="form"
+        >
+          <h3 class="w-full">Tipos de Operaciones</h3>
+          <div class="max-w-[300px]">
+            <span class="p-input-icon-left">
+              <i class="pi pi-search"></i>
+              <input
+                pInputText
+                formControlName="search"
+                type="text"
+                (input)="
+                  dt1.filterGlobal(form.get('search')?.value, 'contains')
+                "
+                placeholder="Nombre"
+              />
+            </span>
+          </div>
+          <button
+            pButton
+            label="Limpiar"
+            class="p-button-outlined"
+            icon="pi pi-undo"
+            (click)="clear(dt1)"
+          ></button>
+          <p-button
+            icon="pi pi-plus"
+            class="ml-auto absolute top-4 right-4"
+            [outlined]="true"
+            [rounded]="true"
+          ></p-button>
+        </form>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Nombre</th>
+          <th>Precio colones</th>
+          <th>Precio dolares</th>
+          <th>Comisión</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-surgery>
+        <tr>
+          <td>{{ surgery.title }}</td>
+          <td>
+            {{ surgery.price | currency : "CRC" : "symbol" : "2.2-2" }}
+          </td>
+          <td>{{ surgery.priceUSD | currency : "USD" : "$" }}</td>
+          <td>{{ surgery.commission }}%</td>
+          <td>
+            <p-inputSwitch
+              icon="pi pi-wrench"
+              [(ngModel)]="surgery.status"
+              value
+            ></p-inputSwitch>
+          </td>
+          <td>
+            <p-button
+              icon="pi pi-wrench"
+              [rounded]="true"
+              size="small"
+            ></p-button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
