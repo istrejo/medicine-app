@@ -42,6 +42,13 @@ const routes: Routes = [
             (m) => m.DoctorListModule
           ),
       },
+      {
+        path: 'medical-services',
+        loadChildren: () =>
+          import('./pages/medical-services/medical-services.module').then(
+            (m) => m.MedicalServicesModule
+          ),
+      },
     ],
   },
   {

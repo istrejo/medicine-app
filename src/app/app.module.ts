@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
+import { registerLocaleData } from '@angular/common';
+import localeCR from '@angular/common/locales/es-CR';
+import localeUS from '@angular/common/locales/es-US';
+
 const primengModules = [ButtonModule, RippleModule, StyleClassModule];
 
 @NgModule({
@@ -27,7 +31,12 @@ const primengModules = [ButtonModule, RippleModule, StyleClassModule];
     BrowserAnimationsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'es-CR' }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    registerLocaleData(localeCR, 'es-CR');
+    registerLocaleData(localeUS, 'es-US');
+  }
+}

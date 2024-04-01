@@ -60,7 +60,7 @@ export class SidebarComponent {
           icon: 'mr-2 pi pi-users',
         },
         {
-          path: 'type-services',
+          path: 'medical-services',
           title: 'Tipos de Servicios',
           icon: 'mr-2 pi pi-server',
         },

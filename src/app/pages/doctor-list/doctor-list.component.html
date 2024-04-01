@@ -12,7 +12,7 @@
     >
       <ng-template pTemplate="caption">
         <form
-          class="flex justify-center md:justify-start flex-wrap gap-1 align-items-center"
+          class="flex justify-center md:justify-start flex-wrap gap-2 align-items-center"
           [formGroup]="form"
         >
           <!-- <span class="flex flex-column gap-2 max-w-[300px]">
@@ -24,7 +24,8 @@
               placeholder="Paciente, Fecha o Sucursal"
             />
           </span> -->
-          <div class="col-12 md:col-4 max-w-[300px]">
+          <!-- <div class="col-12 md:col-4 max-w-[300px]"> -->
+          <div class="max-w-[300px]">
             <span class="p-input-icon-left">
               <i class="pi pi-search"></i>
               <input
@@ -41,7 +42,7 @@
           <button
             pButton
             label="Limpiar"
-            class="ml-2 p-button-outlined"
+            class="p-button-outlined"
             icon="pi pi-undo"
             (click)="clear(dt1)"
           ></button>
