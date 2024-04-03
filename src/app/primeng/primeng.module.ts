@@ -17,6 +17,7 @@ import { CardModule } from 'primeng/card';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { TagModule } from 'primeng/tag';
 import { SliderModule } from 'primeng/slider';
+import { DialogModule } from 'primeng/dialog';
 
 const primengModules = [
   MenuModule,
@@ -36,6 +37,7 @@ const primengModules = [
   MultiSelectModule,
   TagModule,
   SliderModule,
+  DialogModule,
 ];
 
 @NgModule({

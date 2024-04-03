@@ -1,85 +1,24 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+  inject,
+} from '@angular/core';
 import { SidebarOption } from '../../interfaces/sidebar.interface';
+import { LinksService } from '../../services/links/links.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
 })
-export class SidebarComponent {
-  sidebarOptions: SidebarOption[] = [
-    {
-      path: 'home',
-      title: 'Inicio',
-      icon: 'mr-2 pi pi-home ',
-    },
-    {
-      path: 'admission',
-      title: 'Ingresos',
-      icon: 'mr-2 pi pi-users',
-    },
-    {
-      path: 'reports',
-      title: 'Reportes',
-      icon: 'mr-2 pi pi-chart-line',
-      atributes: {
-        pStyleClass: '@next',
-        enterClass: 'hidden',
-        enterActiveClass: 'slidedown',
-        leaveToClass: 'hidden',
-        leaveActiveClass: 'slideup',
-      },
-      sub_options: [
-        {
-          path: 'patients',
-          title: 'Pacientes',
-          icon: 'mr-2 pi pi-users',
-        },
-        {
-          path: 'revenue',
-          title: 'Ingresos',
-          icon: 'mr-2 pi pi-dollar',
-        },
-      ],
-    },
-    {
-      path: 'settings',
-      title: 'Consfiguraciones',
-      icon: 'mr-2 pi pi-cog',
-      atributes: {
-        pStyleClass: '@next',
-        enterClass: 'hidden',
-        enterActiveClass: 'slidedown',
-        leaveToClass: 'hidden',
-        leaveActiveClass: 'slideup',
-      },
-      sub_options: [
-        {
-          path: 'doctor-list',
-          title: 'Lista de medicos',
-          icon: 'mr-2 pi pi-users',
-        },
-        {
-          path: 'medical-services',
-          title: 'Tipos de Servicios',
-          icon: 'mr-2 pi pi-server',
-        },
-        {
-          path: 'surgeries',
-          title: 'Tipos de Operaciones',
-          icon: 'mr-2 pi pi-heart-fill',
-        },
-        {
-          path: 'appointments',
-          title: 'Tipos de Consultas',
-          icon: 'mr-2 pi pi-home',
-        },
-        {
-          path: 'branches',
-          title: 'Sucursales',
-          icon: 'mr-2 pi pi-home',
-        },
-      ],
-    },
-  ];
+export class SidebarComponent implements OnInit {
+  options: SidebarOption[] = [];
+  linksSvc = inject(LinksService);
+
+  ngOnInit(): void {
+    this.options = this.linksSvc.getOptions();
+  }
 }

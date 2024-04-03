@@ -1,0 +1,47 @@
+[
+  {
+    "path": "home",
+    "title": "Inicio",
+    "icon": "mr-2 pi pi-home "
+  },
+  {
+    "path": "admission",
+    "title": "Ingresos",
+    "icon": "mr-2 pi pi-users"
+  },
+  {
+    "path": "patients",
+    "title": "Pacientes",
+    "icon": "mr-2 pi pi-users"
+  },
+  {
+    "path": "revenue",
+    "title": "Ingresos",
+    "icon": "mr-2 pi pi-dollar"
+  },
+  {
+    "path": "doctor-list",
+    "title": "Lista de medicos",
+    "icon": "mr-2 pi pi-users"
+  },
+  {
+    "path": "medical-services",
+    "title": "Tipos de Servicios",
+    "icon": "mr-2 pi pi-server"
+  },
+  {
+    "path": "surgeries",
+    "title": "Tipos de Operaciones",
+    "icon": "mr-2 pi pi-heart-fill"
+  },
+  {
+    "path": "appointments",
+    "title": "Tipos de Consultas",
+    "icon": "mr-2 pi pi-home"
+  },
+  {
+    "path": "branches",
+    "title": "Sucursales",
+    "icon": "mr-2 pi pi-home"
+  }
+]
