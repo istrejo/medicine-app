@@ -74,6 +74,11 @@ export class SidebarComponent {
           title: 'Tipos de Consultas',
           icon: 'mr-2 pi pi-home',
         },
+        {
+          path: 'branches',
+          title: 'Sucursales',
+          icon: 'mr-2 pi pi-home',
+        },
       ],
     },
   ];

@@ -63,6 +63,13 @@ const routes: Routes = [
             (m) => m.AppointmentsModule
           ),
       },
+      {
+        path: 'branches',
+        loadChildren: () =>
+          import('./pages/branches/branches.module').then(
+            (m) => m.BranchesModule
+          ),
+      },
     ],
   },
   {
