@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  medicine-app:
+    ports:
+      - "8004:80"
+    container_name: medicine-app
+    restart: always
+    platform: linux/amd64
+    image: olivaresdeveloper/medicine-app:latest
+    networks:
+      crsoporte_system:
+        ipv4_address: 192.169.3.5
+
+networks:
+  crsoporte_system:
+    external: true
