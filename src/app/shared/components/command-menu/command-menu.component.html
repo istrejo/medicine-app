@@ -5,7 +5,7 @@
       <input
         type="text"
         pInputText
-        placeholder="Search menus, shortcuts, contact and more..."
+        placeholder="Menú de busqueda."
         class="w-full border-none shadow-none outline-none"
         (click)="show = true"
       />
@@ -36,7 +36,7 @@
         #input1
         type="text"
         pInputText
-        placeholder="Search menus, shortcuts, contact and more..."
+        placeholder="Menú de busqueda"
         (input)="searchItem(search)"
         [(ngModel)]="search"
         debounce="1000"
@@ -55,6 +55,7 @@
     <ul class="list-none m-0 p-0">
       @for(item of recents; track item.title) {
       <li
+        (click)="selectItem(item)"
         class="select-none p-2 font-medium text-base cursor-pointer border-round-lg hover:surface-hover hover:text-primary"
       >
         {{ item.title }}

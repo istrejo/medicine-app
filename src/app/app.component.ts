@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   private commandMenuSvc = inject(CommandMenuService);
   show: boolean = false;
 
-  primengConfig = inject(PrimeNGConfig);
+  private primengConfig = inject(PrimeNGConfig);
   title = 'medicine-app';
 
   ngOnInit(): void {

@@ -65,10 +65,10 @@ export class CommandMenuComponent implements OnInit {
     this.recents.unshift(item);
 
     this.items$ = new Observable();
+    this.router.navigate([item.path]);
 
     this.localStorageSvc.setItem('recents', this.recents.slice(0, 5));
     this.show = false;
     this.search = '';
-    this.router.navigate([item.path]);
   }
 }
